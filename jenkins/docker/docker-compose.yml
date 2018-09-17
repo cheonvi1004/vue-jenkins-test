@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+ vueapp:
+    build: 'app'
+    working_dir: "${PWD}"
+    environment:
+      - VIRTUAL_HOST=vue-test.niyaton.net
+      - VIRTUAL_PORT=8080
+    expose:
+      - 8080
+    volumes_from:
+      - container:jenkins_jenkins_1
+    networks:
+      - default
+      - nginx-proxy
+networks:
+  nginx-proxy:
+    external: true
