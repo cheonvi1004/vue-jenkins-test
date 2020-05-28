@@ -4,6 +4,9 @@
   "description": "A Vue.js project",
   "author": "Kenji Fujiwara <niyaton@gmail.com>",
   "private": true,
+  "publishConfig": {
+    "registry": "http://183.111.127.218:8081/repository/npm-group/"
+  },
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
